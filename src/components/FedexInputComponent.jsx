@@ -1,5 +1,4 @@
-"use client";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const FedexInputComponent = () => {
   const [awb, setAwb] = useState("");

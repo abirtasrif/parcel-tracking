@@ -1,4 +1,3 @@
-import React from "react";
 import UrlInputComponent from "../components/DhlInputComponent";
 
 const Dhl = () => {

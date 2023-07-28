@@ -1,4 +1,3 @@
-import React from "react";
 import FedexInputComponent from "../components/FedexInputComponent";
 
 const Fedex = () => {

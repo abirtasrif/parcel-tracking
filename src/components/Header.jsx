@@ -1,12 +1,12 @@
-import React from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="flex gap-5 h-32 bg-slate-300 items-center justify-center text-2xl">
-      <Link href="/dhl">DHL</Link>
-      <Link href="/fedex">Fedex</Link>
-      <Link href="/ups">Ups</Link>
+      <Link to="/">Home</Link>
+      <Link to="/dhl">DHL</Link>
+      <Link to="/fedex">Fedex</Link>
+      <Link to="/ups">Ups</Link>
     </div>
   );
 };

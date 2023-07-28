@@ -1,4 +1,3 @@
-import React from "react";
 import UpsInputComponent from "../components/UpsInputComponent";
 
 const Ups = () => {

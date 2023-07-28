@@ -1,10 +1,23 @@
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import Home from "./pages/Home.jsx";
+import Dhl from "./pages/dhl.jsx";
+import Fedex from "./pages/fedex.jsx";
+import Ups from "./pages/ups.jsx";
+
 const App = () => {
   return (
-    <div className="flex flex-col items-center">
-      <img src="../public/image.png" alt="parcel" width="80" height="80" />
-      <h1>Welcome to Parcel Tracking</h1>
-      <p>Please select your service provider from above menu </p>
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dhl" element={<Dhl />} />
+        <Route path="/fedex" element={<Fedex />} />
+        <Route path="/ups" element={<Ups />} />
+      </Routes>
+      <Footer />
+    </>
   );
 };
 
