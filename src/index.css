@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active,
+span {
+  color: darkviolet;
+}
+
+.dhl,
+.fedex,
+.ups {
+  @apply flex flex-col gap-3 items-center mt-5;
+}
+
+.heading {
+  @apply text-2xl;
+}
+
+.search {
+  @apply flex flex-col items-center gap-4 w-1/3;
+}
+
+.input-field {
+  @apply bg-transparent border-2 border-slate-500 py-3 px-5 rounded-xl outline-none focus:border-violet-400 duration-300 w-full;
+}
+
+.button {
+  @apply bg-violet-400 text-slate-900 py-3 px-5 rounded-xl hover:bg-violet-500 duration-300 w-full;
+}

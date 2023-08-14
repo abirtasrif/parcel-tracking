@@ -2,8 +2,10 @@ import UpsInputComponent from "../components/UpsInputComponent";
 
 const Ups = () => {
   return (
-    <div className="h-60">
-      <h1>Track UPS Parcel</h1>
+    <div className="ups h-60">
+      <h1 className="heading">
+        Track <span>UPS</span> Parcel
+      </h1>
       <UpsInputComponent />
     </div>
   );

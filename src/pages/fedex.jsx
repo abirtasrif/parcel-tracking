@@ -2,8 +2,10 @@ import FedexInputComponent from "../components/FedexInputComponent";
 
 const Fedex = () => {
   return (
-    <div className="h-60">
-      <h1>Track FedEx Parcel</h1>
+    <div className="fedex h-60">
+      <h1 className="heading">
+        Track <span>FedEx</span> Parcel
+      </h1>
       <FedexInputComponent />
     </div>
   );

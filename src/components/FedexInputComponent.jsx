@@ -19,14 +19,17 @@ const FedexInputComponent = () => {
   };
 
   return (
-    <div>
+    <div className="search">
       <input
         type="text"
         value={awb}
         onChange={handleChange}
         placeholder="Enter AWB number"
+        className="input-field"
       />
-      <button onClick={handleSubmit}>Track</button>
+      <button onClick={handleSubmit} className="button">
+        Track
+      </button>
     </div>
   );
 };

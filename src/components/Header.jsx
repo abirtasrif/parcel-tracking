@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="flex gap-5 h-32 bg-slate-300 items-center justify-center text-2xl">
-      <Link to="/">Home</Link>
-      <Link to="/dhl">DHL</Link>
-      <Link to="/fedex">Fedex</Link>
-      <Link to="/ups">Ups</Link>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/dhl">DHL</NavLink>
+      <NavLink to="/fedex">Fedex</NavLink>
+      <NavLink to="/ups">Ups</NavLink>
     </div>
   );
 };
