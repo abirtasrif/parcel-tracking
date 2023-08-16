@@ -11,14 +11,15 @@ const DhlInputComponent = () => {
     "https://www.dhl.com/bd-en/home/tracking/tracking-express.html?submit=1&tracking-id=" +
     awb;
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     if (dhlUrl) {
       window.open(dhlUrl, "_blank");
     }
   };
 
   return (
-    <div className="search">
+    <form onSubmit={handleSubmit} className="search">
       <input
         type="text"
         value={awb}
@@ -26,10 +27,10 @@ const DhlInputComponent = () => {
         placeholder="Enter AWB number"
         className="input-field"
       />
-      <button onClick={handleSubmit} className="button">
+      <button type="submit" className="button">
         Track
       </button>
-    </div>
+    </form>
   );
 };
 

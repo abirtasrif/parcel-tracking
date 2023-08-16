@@ -19,7 +19,7 @@ const UpsInputComponent = () => {
   };
 
   return (
-    <div className="search">
+    <form onSubmit={handleSubmit} className="search">
       <input
         type="text"
         value={awb}
@@ -27,10 +27,10 @@ const UpsInputComponent = () => {
         placeholder="Enter AWB number"
         className="input-field"
       />
-      <button onClick={handleSubmit} className="button">
+      <button type="submit" className="button">
         Track
       </button>
-    </div>
+    </form>
   );
 };
 
