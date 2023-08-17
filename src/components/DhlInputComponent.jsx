@@ -7,11 +7,11 @@ const DhlInputComponent = () => {
     setAwb(event.target.value);
   };
 
-  const dhlUrl =
-    "https://www.dhl.com/bd-en/home/tracking/tracking-express.html?submit=1&tracking-id=" +
-    awb;
-
   const handleSubmit = (event) => {
+    const dhlUrl =
+      "https://www.dhl.com/bd-en/home/tracking/tracking-express.html?submit=1&tracking-id=" +
+      awb;
+
     event.preventDefault();
     if (dhlUrl) {
       window.open(dhlUrl, "_blank");
