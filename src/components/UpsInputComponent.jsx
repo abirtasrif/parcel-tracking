@@ -7,12 +7,13 @@ const UpsInputComponent = () => {
     setAwb(event.target.value);
   };
 
-  const upsUrl =
-    "https://www.ups.com/track?track=yes&trackNums=" +
-    awb +
-    "&loc=en_US&requester=ST/trackdetails";
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const upsUrl =
+      "https://www.ups.com/track?track=yes&trackNums=" +
+      awb +
+      "&loc=en_US&requester=ST/trackdetails";
 
-  const handleSubmit = () => {
     if (upsUrl) {
       window.open(upsUrl, "_blank");
     }

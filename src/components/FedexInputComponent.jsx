@@ -7,12 +7,13 @@ const FedexInputComponent = () => {
     setAwb(event.target.value);
   };
 
-  const fedexUrl =
-    "https://www.fedex.com/fedextrack/?action=track&tracknumbers=" +
-    awb +
-    "&locale=en_us&cntry_code=us";
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const fedexUrl =
+      "https://www.fedex.com/fedextrack/?action=track&tracknumbers=" +
+      awb +
+      "&locale=en_us&cntry_code=us";
 
-  const handleSubmit = () => {
     if (fedexUrl) {
       window.open(fedexUrl, "_blank");
     }
