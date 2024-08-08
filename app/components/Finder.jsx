@@ -50,7 +50,7 @@ export default function Finder({ currierCompany }) {
               autoComplete="on"
               required
               className="min-w-80 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              placeholder="Enter AWB Number"
+              placeholder={`Enter ${currierCompany} AWB Number`}
               onChange={(e) => setAwb(e.target.value)}
             />
             <button
@@ -63,6 +63,9 @@ export default function Finder({ currierCompany }) {
           </div>
           <p className="mt-4 text-sm leading-6 text-gray-900">
             Will be opened in another browser tab
+          </p>
+          <p className="mt-4 text-sm leading-6 text-indigo-400">
+            You may change currier provider from top left menu
           </p>
         </form>
       </div>
