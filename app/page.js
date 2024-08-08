@@ -39,7 +39,7 @@ export default function Home() {
         <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
           <Image
             className=" w-full bg-gray-50 object-cover h-full lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
-            src="https://images.pexels.com/photos/5025510/pexels-photo-5025510.jpeg"
+            src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55"
             alt=""
             height={1000}
             width={600}
