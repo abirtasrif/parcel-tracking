@@ -1,6 +1,6 @@
 "use client";
 import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, HomeIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -27,20 +27,7 @@ export default function Navbar() {
                     }`}
                     href="/"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-                      />
-                    </svg>
+                    <HomeIcon className="size-6 text-gray-900" />
                   </Link>
 
                   <Link
@@ -74,6 +61,17 @@ export default function Navbar() {
                     href="/ups"
                   >
                     UPS
+                  </Link>
+
+                  <Link
+                    className={`${
+                      pathname === "/Chronopost"
+                        ? "inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                        : "inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    }`}
+                    href="/chronopost"
+                  >
+                    Chronopost
                   </Link>
                 </div>
               </div>
@@ -121,6 +119,13 @@ export default function Navbar() {
                 className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
               >
                 UPS
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href="/chronopost"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+              >
+                Chronopost
               </Disclosure.Button>
             </div>
           </Disclosure.Panel>

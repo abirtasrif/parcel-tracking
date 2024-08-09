@@ -17,6 +17,9 @@ export default function Finder({ currierCompany }) {
       case "Ups":
         url = `https://www.ups.com/track?track=yes&trackNums=${awb}&loc=en_US&requester=ST/trackdetails`;
         break;
+      case "Chronopost":
+        url = `https://www.chronopost.fr/tracking-no-cms/suivi-page?listeNumerosLT=${awb}&langue=en`;
+        break;
       default:
         console.error("Unsupported courier company");
         return;
