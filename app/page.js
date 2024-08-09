@@ -6,9 +6,9 @@ export default function Home() {
     <div className="relative bg-white">
       <Navbar inHome="true" />
       <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
-        <div className="px-6 mt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-[16.65rem] lg:pt-16 xl:col-span-6 relative">
+        <div className="px-6 mt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-[16.65rem] 2xl:pb-[22rem] lg:pt-16 xl:col-span-6 relative">
           <div className="mx-auto max-w-2xl lg:mx-0 z-20">
-            <h1 className="mt-6 text-4xl font-bold tracking-tight text-gray-900 sm:mt-5 sm:leading-[4.5rem] sm:text-6xl">
+            <h1 className="sm:mt-20 lg:mt-6 2xl:mt-16 font-bold tracking-tight text-gray-900 sm:leading-[4.5rem] text-6xl">
               <span className="text-indigo-700">Effortlessly</span> Track your
               parcel from any provider
             </h1>
@@ -19,6 +19,7 @@ export default function Home() {
             width={300}
             height={300}
             className="absolute right-[13rem] top-[3rem] z-10 opacity-10"
+            layout="responsive"
           />
         </div>
         <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">

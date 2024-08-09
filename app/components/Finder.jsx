@@ -6,7 +6,6 @@ export default function Finder({ currierCompany }) {
 
   const launchSearch = (awb) => {
     let url;
-
     switch (currierCompany) {
       case "DHL":
         url = `https://www.dhl.com/bd-en/home/tracking/tracking-express.html?submit=1&tracking-id=${awb}`;
@@ -42,10 +41,10 @@ export default function Finder({ currierCompany }) {
           </h2>
         </div>
         <form className="mt-10 max-w-md">
-          <div className="flex gap-x-4">
-            <label htmlFor="awb-number" className="sr-only">
-              Airway Bill (AWB) Number
-            </label>
+          <label htmlFor="awb-number" className="sr-only">
+            Airway Bill (AWB) Number
+          </label>
+          <div className="flex sm:flex-col lg:flex-row gap-3">
             <input
               id="awb-number"
               name="awb-number"
