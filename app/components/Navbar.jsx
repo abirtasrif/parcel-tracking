@@ -8,14 +8,18 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar() {
+export default function Navbar({ inHome }) {
   const pathname = usePathname();
 
   return (
     <Disclosure as="nav" className="bg-white shadow">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 fixed">
+          <div
+            className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-30 fixed ${
+              inHome ? "bg-blue-700/5  backdrop-blur-3xl" : ""
+            }`}
+          >
             <div className="flex h-16 justify-between">
               <div className="flex">
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
