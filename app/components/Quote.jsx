@@ -38,7 +38,7 @@ const Quote = () => {
         </div>
       ) : (
         <section className="isolate overflow-hidden bg-white">
-          <div className="mt-14">
+          <div className="mt-14 mb-10">
             <figure>
               <div className="relative">
                 <svg
