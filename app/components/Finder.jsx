@@ -1,8 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Finder({ currierCompany }) {
   const [awb, setAwb] = useState("");
+  const [quote, setQuote] = useState({ text: "", author: "" });
+  const [loading, setLoading] = useState(true);
 
   const launchSearch = (awb) => {
     let url;
@@ -30,6 +32,24 @@ export default function Finder({ currierCompany }) {
     event.preventDefault();
     launchSearch(awb);
   };
+
+  const fetchRandomQuote = async () => {
+    try {
+      const response = await fetch("https://quotes-api-self.vercel.app/quote");
+      const quotes = await response.json();
+      // const randomIndex = Math.floor(Math.random() * quotes.length);
+      // setQuote(quotes[randomIndex]);
+      setQuote(quotes);
+      setLoading(false);
+    } catch (error) {
+      console.error("Failed to fetch quote", error);
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchRandomQuote();
+  }, []);
 
   return (
     <div className="bg-white py-16 sm:py-24 lg:py-32 flex flex-col">
@@ -63,14 +83,22 @@ export default function Finder({ currierCompany }) {
               Track Parcel
             </button>
           </div>
-          <p className="mt-4 text-sm leading-6 text-gray-900">
-            Will be opened in another browser tab
-          </p>
-          <p className="mt-4 text-sm leading-6 text-indigo-400">
-            You may change currier provider from top left menu
-          </p>
         </form>
+        <p className="mt-4 text-sm leading-6 text-indigo-400">
+          You may change provider from top left menu
+        </p>
       </div>
+
+      {loading ? (
+        <div className="quote-container flex flex-col justify-center text-center">
+          Loading...
+        </div>
+      ) : (
+        <div className="quote-container flex flex-col justify-center text-center">
+          <p className="q-text">{quote.quote}</p>
+          <p className="q-author">{quote.author || "Unknown"}</p>
+        </div>
+      )}
     </div>
   );
 }
