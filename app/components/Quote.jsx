@@ -37,15 +37,15 @@ const Quote = () => {
           />
         </div>
       ) : (
-        <section className="isolate overflow-hidden bg-white">
-          <div className="mt-14 mb-10">
+        <section className="overflow-hidden bg-white sm:px-20 lg:px-0 isolate">
+          <div className="mb-10 mt-14">
             <figure>
               <div className="relative">
                 <svg
                   viewBox="0 0 162 128"
                   fill="none"
                   aria-hidden="true"
-                  className="absolute -top-12 left-0 -z-10 h-32 stroke-gray-900/10"
+                  className="absolute left-0 h-32 -top-12 -z-10 stroke-gray-900/10"
                 >
                   <path
                     id="b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb"
@@ -57,9 +57,9 @@ const Quote = () => {
                   <p>{quote.quote}</p>
                 </blockquote>
               </div>
-              <div className="col-end-1 w-16 lg:row-span-4 lg:w-72"></div>
+              <div className="w-16 col-end-1 lg:row-span-4 lg:w-72"></div>
               <figcaption className="text-base lg:col-start-1 lg:row-start-3">
-                <div className="mt-1 text-gray-500 font-semibol text-lg">
+                <div className="mt-1 text-lg text-gray-500 font-semibol">
                   - {quote.author}
                 </div>
               </figcaption>

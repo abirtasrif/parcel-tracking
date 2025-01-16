@@ -33,19 +33,19 @@ export default function Finder({ currierCompany }) {
   };
 
   return (
-    <div className="bg-white py-16 sm:py-24 lg:py-32 flex flex-col">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 items-center">
+    <div className="flex flex-col py-16 bg-white sm:py-24 lg:py-32">
+      <div className="items-center px-6 mx-auto max-w-7xl lg:px-8">
         <div className="max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           <h2 className="inline sm:block">
             Track <span className="text-indigo-600">{currierCompany} </span>
             parcel
           </h2>
         </div>
-        <form className="mt-10 max-w-md">
+        <form className="max-w-md mt-10">
           <label htmlFor="awb-number" className="sr-only">
             Airway Bill (AWB) Number
           </label>
-          <div className="flex sm:flex-col lg:flex-row gap-3">
+          <div className="grid gap-3 sm:grid-cols-1 lg:grid-cols-2">
             <input
               id="awb-number"
               name="awb-number"
