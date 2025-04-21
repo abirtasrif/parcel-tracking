@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+.quote-div {
+  border-radius: 9px;
+  background: #e0e0e0;
+  box-shadow: -25px 25px 49px #bebebe, 25px -25px 49px #ffffff;
+}

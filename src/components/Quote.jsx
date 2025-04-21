@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { BallTriangle } from "react-loader-spinner";
 
 const Quote = () => {
   const [quote, setQuote] = useState({ text: "", author: "" });
@@ -22,23 +21,12 @@ const Quote = () => {
   }, []);
 
   return (
-    <div className="max-w-[800px] mx-auto">
+    <div className="max-w-[800px] ml-9 mt-5">
       {loading ? (
-        <div className="quote-container">
-          <BallTriangle
-            height={100}
-            width={100}
-            radius={5}
-            color="#4338ca"
-            ariaLabel="ball-triangle-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-            visible={true}
-          />
-        </div>
+        <div className="quote-container"></div>
       ) : (
-        <section className="overflow-hidden bg-white sm:px-20 lg:px-0 isolate">
-          <div className="mb-10 mt-14">
+        <section className="overflow-hidden quote-div bg-white sm:px-20 lg:px-0 isolate">
+          <div className="mb-10 mt-14 px-10">
             <figure>
               <div className="relative">
                 <svg
