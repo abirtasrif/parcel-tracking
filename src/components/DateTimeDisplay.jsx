@@ -11,7 +11,6 @@ const DateTimeDisplay = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Format date as "dd mmm yy"
   const formatDate = (date) => {
     const months = [
       "Jan",
@@ -33,7 +32,6 @@ const DateTimeDisplay = () => {
     return `${day}-${month}-${year}`;
   };
 
-  // Get time in hh:mm am/pm format for different timezones
   const getTimeForTimezone = (timezone) => {
     return currentTime.toLocaleTimeString("en-US", {
       timeZone: timezone,
@@ -43,7 +41,6 @@ const DateTimeDisplay = () => {
     });
   };
 
-  // Timezone information for each city
   const cities = [
     { name: "Dhaka", timezone: "Asia/Dhaka" },
     { name: "Paris", timezone: "Europe/Paris" },
@@ -54,7 +51,7 @@ const DateTimeDisplay = () => {
   ];
 
   return (
-    <div className="bg-white p-4 rounded-lg max-w-md mt-24 max-h-[350px] ml-5 time">
+    <div className="bg-white p-4 rounded-lg max-w-md mt-20 max-h-[350px] ml-5 time">
       <div className="text-center mb-4">
         <h2 className="text-xl font-semibold text-gray-800">
           Today is {formatDate(currentTime)}

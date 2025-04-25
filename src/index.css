@@ -1,7 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--font-poppins);
+}
 
 .quote-div {
   border-radius: 9px;
-  background: #e0e0e0;
   box-shadow: -25px 25px 49px #bebebe, 25px -25px 49px #ffffff;
 }

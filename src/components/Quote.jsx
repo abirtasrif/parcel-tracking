@@ -21,11 +21,11 @@ const Quote = () => {
   }, []);
 
   return (
-    <div className="max-w-[800px] ml-9 mt-5">
+    <div className="w-full px-9 mt-5">
       {loading ? (
         <div className="quote-container"></div>
       ) : (
-        <section className="overflow-hidden quote-div bg-white sm:px-20 lg:px-0 isolate">
+        <section className="overflow-hidden quote-div sm:px-20 lg:px-0 isolate bg-emerald-50">
           <div className="mb-10 mt-14 px-10">
             <figure>
               <div className="relative">
@@ -41,13 +41,13 @@ const Quote = () => {
                   />
                   <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
                 </svg>
-                <blockquote className="text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+                <blockquote className="text-xl font-semibold leading-8 text-gray-900 sm:leading-9">
                   <p>{quote.quote}</p>
                 </blockquote>
               </div>
               <div className="w-16 col-end-1 lg:row-span-4 lg:w-72"></div>
               <figcaption className="text-base lg:col-start-1 lg:row-start-3">
-                <div className="mt-1 text-lg text-gray-500 font-semibol">
+                <div className="mt-1 text-lg text-gray-500 font-light">
                   - {quote.author}
                 </div>
               </figcaption>

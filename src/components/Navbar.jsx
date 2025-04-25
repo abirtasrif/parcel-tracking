@@ -6,7 +6,7 @@ import {
 import { Bars3Icon, HomeIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 
-export default function Navbar({ inHome }) {
+export default function Navbar() {
   return (
     <Disclosure
       as="nav"
@@ -15,9 +15,7 @@ export default function Navbar({ inHome }) {
       {({ open }) => (
         <>
           <div
-            className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-30 fixed ${
-              inHome ? "bg-blue-700/5  backdrop-blur-3xl" : ""
-            }`}
+            className={`mx-auto w-full px-4 sm:px-6 lg:px-8 z-30 fixed bg-white`}
           >
             <div className="flex justify-between h-16">
               <div className="flex">

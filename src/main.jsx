@@ -2,7 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import App from "./App";
+import DateTimeDisplay from "./components/DateTimeDisplay";
 import Navbar from "./components/Navbar";
+import Quote from "./components/Quote";
 import "./index.css";
 import ChronopostPage from "./pages/chronopost";
 import DHLPage from "./pages/dhl";
@@ -14,7 +16,11 @@ const RootLayout = () => {
   return (
     <div className="relative">
       <Navbar />
-      <Outlet /> {/* This is where child routes will render */}
+      <div className="flex flex-row">
+        <DateTimeDisplay />
+        <Outlet />
+      </div>
+      <Quote />
     </div>
   );
 };
