@@ -5,6 +5,7 @@ import App from "./App";
 import DateTimeDisplay from "./components/DateTimeDisplay";
 import Navbar from "./components/Navbar";
 import Quote from "./components/Quote";
+import Weather from "./components/Weather";
 import "./index.css";
 import ChronopostPage from "./pages/chronopost";
 import DHLPage from "./pages/dhl";
@@ -19,6 +20,7 @@ const RootLayout = () => {
       <div className="flex flex-row">
         <DateTimeDisplay />
         <Outlet />
+        <Weather />
       </div>
       <Quote />
     </div>

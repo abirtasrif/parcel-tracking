@@ -32,7 +32,7 @@ export default function Finder({ currierCompany }) {
 
   return (
     <div className="flex flex-col bg-white py-16 sm:py-20 lg:py-32 w-3/5">
-      <div className="items-center mx-auto max-w-7xl lg:px-8">
+      <div className="items-center mx-auto w-full">
         <div className="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
           <h2 className="inline sm:block font-semibold">
             Track <span className="text-indigo-600">{currierCompany} </span>
