@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const DateTimeDisplay = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -51,17 +51,17 @@ const DateTimeDisplay = () => {
   ];
 
   return (
-    <div className="bg-white p-4 rounded-lg max-w-md mt-20 max-h-[350px] ml-5 time">
+    <div className="bg-white p-4 rounded-lg max-w-2xl mt-20 max-h-[350px] ml-5 time">
       <div className="text-center mb-4">
         <h2 className="text-base font-semibold text-gray-800">
           Today is {formatDate(currentTime)}
         </h2>
       </div>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-3">
         {cities.map((city) => (
           <div
             key={city.name}
-            className="bg-gray-50 p-2 rounded-md text-center text-sm border-2 border-cyan-400 w-[90px] h-[90px] mr-4"
+            className="bg-gray-50 p-2 rounded-md text-center text-sm border-2 border-cyan-400 w-[90px] h-[90px] mr-4 flex flex-col items-center justify-center"
           >
             <h3 className="font-medium text-gray-700 mb-1">{city.name}</h3>
             <p className=" font-semibold text-indigo-900">

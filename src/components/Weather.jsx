@@ -34,7 +34,7 @@ const Weather = () => {
     forecastDays.forEach((day) => {
       day.hour.forEach((hour) => {
         const hourTime = new Date(hour.time);
-        if (hourTime > now && upcomingHours.length < 15) {
+        if (hourTime > now && upcomingHours.length < 6) {
           upcomingHours.push(hour);
         }
       });
@@ -62,28 +62,34 @@ const Weather = () => {
   const next16Hours = filterNext16Hours(forecastData.forecastday);
 
   return (
-    <div className={`pt-4 w-[600px]`}>
-      <div className="max-w-4xl mx-auto bg-opacity-30 rounded-xl pt-10 backdrop-blur-sm text-black">
+    <div className={`pt-4 w-[300px]`}>
+      <div className="max-w-[250px] mx-auto bg-opacity-30 rounded-xl pt-10 backdrop-blur-sm text-black">
         {/* Current Weather */}
-        <div className="text-center mb-8">
-          <div className="grid grid-cols-3 mx-auto items-center">
-            <div className="text-6xl flex flex-row gap-2">
-              <p className="mt-2 text-2xl">{weatherData.condition.text}</p>
-              <p> ☀️</p>
+        <div className="text-center">
+          <div className="grid grid-cols-1 mx-auto items-center mt-2">
+            <div className="text-2xl flex flex-row gap-1">
+              <p className="mt-2 text-lg">{weatherData.condition.text}</p>
+              <img
+                src={`https:${weatherData.condition.icon}`}
+                alt="Weather Icon"
+                className="w-8 h-8" // Adjust size as needed
+              />
             </div>
-            <div className="p-4">
-              <p className="text-3xl font-bold">{weatherData.temp_c}°C</p>
-              <p className="text-sm">Temperature</p>
-            </div>
-            <div className="p-4">
-              <p className="text-3xl font-bold">{weatherData.humidity}%</p>
-              <p className="text-sm">Humidity</p>
+            <div className="flex flex-row">
+              <div className="p-4">
+                <p className="text-xl font-bold">{weatherData.temp_c}°C</p>
+                <p className="text-sm">Temperature</p>
+              </div>
+              <div className="p-4">
+                <p className="text-xl font-bold">{weatherData.humidity}%</p>
+                <p className="text-sm">Humidity</p>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Next 16 Hours Forecast */}
-        <div className="grid grid-cols-5">
+        <div className="grid grid-cols-2">
           {next16Hours.map((hour, index) => {
             const isTomorrow =
               new Date(hour.time).getDate() !== new Date().getDate();
@@ -103,7 +109,7 @@ const Weather = () => {
                     hour12: true,
                   })}
                 </p>
-                <p className="text-xl my-1">
+                <p className="text-lg my-1">
                   {hour.temp_c}
                   <span className="text-sm">°C</span>
                 </p>
