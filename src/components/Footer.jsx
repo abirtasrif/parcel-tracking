@@ -37,7 +37,8 @@ export default function Footer() {
 
         <div className="mt-10 border-t border-white/10 pt-6 text-center">
           <p className="text-xs text-white/40">
-            &copy; {new Date().getFullYear()} Abir Tasrif Anto. All rights
+            &copy; {new Date().getFullYear()}{" "}
+            <a href="https://abirtasrif.vercel.app/">Abir Tasrif</a>. All rights
             reserved.
           </p>
           <p className="mt-1 text-[11px] text-white/25">
